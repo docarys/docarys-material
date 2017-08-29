@@ -1,6 +1,6 @@
 {
   "name": "docarys-material",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A Material Design theme for docarys",
   "keywords": [
     "docarys",
@@ -10,7 +10,7 @@
   "homepage": "http://www.docarys.io",
   "bugs": {
     "url": "https://github.com/docarys/docarys-material/issues",
-    "email": "martin.donath@squidfunk.com"
+    "email": "sesispla@outlook.com"
   },
   "license": "MIT",
   "author": {
