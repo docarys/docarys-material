@@ -17,16 +17,16 @@
 
 # Material for MkDocs
 
-A Material Design theme for [MkDocs](http://www.mkdocs.org).
+A Material Design theme for [docarys](http://www.docarys.io).
 
-[![Material for MkDocs](docs/images/material.png)](http://squidfunk.github.io/mkdocs-material/)
+[![Material for docarys](docs/images/material.png)](https://github.com/docarys/docarys-material)
 
 ## Quick start
 
-Install with `pip`:
+Install with `npm`:
 
 ``` sh
-pip install mkdocs-material
+npm install docarys-material
 ```
 
 Append the following line to your existing `mkdocs.yml`:
@@ -36,13 +36,16 @@ theme: 'material'
 ```
 
 For detailed installation instructions and a demo, visit
-http://squidfunk.github.io/mkdocs-material/
+http://www.docarys.io
 
 ## License
 
+docarys is a Node port (with enhacements) of (MkDocs)[https://github.com/mkdocs/mkdocs] by Tom Christie
+docarys-material is a hard-fork from [mkdocs-material](https://github.com/squidfunk/mkdocs-material) by Martin Donath
+
 **MIT License**
 
-Copyright (c) 2016-2017 Martin Donath
+Copyright (c) 2016-2017 Martin Donath, Sergio Sisternes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to
