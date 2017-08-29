@@ -40,7 +40,8 @@ http://www.docarys.io
 
 ## License
 
-docarys is a Node port (with enhacements) of (MkDocs)[https://github.com/mkdocs/mkdocs] by Tom Christie
+docarys is a Node port (with enhacements) of [MkDocs](https://github.com/mkdocs/mkdocs) by Tom Christie
+
 docarys-material is a hard-fork from [mkdocs-material](https://github.com/squidfunk/mkdocs-material) by Martin Donath
 
 **MIT License**
