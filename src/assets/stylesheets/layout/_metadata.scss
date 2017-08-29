@@ -1,0 +1,28 @@
+.metadata {
+  display: block;
+  margin-bottom: 2rem;
+  color: #6E6E6E;
+  font-size: 1.2rem;
+  overflow: hidden;
+}
+
+.contributors {
+  display: inline-block;
+  margin: 0 !important;
+  margin-bottom: 20 !important;
+  padding: 0;
+  list-style: none;
+}
+
+.contributors li {
+  display: inline-block;
+  margin: 0 !important;
+  padding: 0 !important;
+  vertical-align: top;
+}
+
+.contributors li img {
+  width: 2rem;
+  margin: 0;
+  border-radius: 50%;
+}
