@@ -15,7 +15,7 @@
   [pypi-image]: https://img.shields.io/pypi/v/mkdocs-material.svg
   [pypi-link]: https://pypi.python.org/pypi/mkdocs-material
 
-# Material for MkDocs
+# Material for docarys
 
 A Material Design theme for [docarys](http://www.docarys.io).
 

@@ -1,6 +1,6 @@
 {
   "name": "docarys-material",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A Material Design theme for docarys",
   "keywords": [
     "docarys",
@@ -97,6 +97,5 @@
   },
   "engines": {
     "node": ">= 5.0.0"
-  },
-  "private": true
+  }
 }
