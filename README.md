@@ -13,7 +13,11 @@
 
 A Material Design theme for [docarys](http://www.docarys.io).
 
-[![Material for docarys](docs/images/material.png)](https://github.com/docarys/docarys-material)
+docarys is as magic as a dragon spitting fire 🐉 🔥
+
+[![Material for docarys](docs/material.png)](https://github.com/docarys/docarys-material)
+
+Based in concepts from mkdocs, hard-forked from mkdocs-material, inspired by Microsoft Docs, and built on top of Node.JS.
 
 ## Quick start
 
