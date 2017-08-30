@@ -5,13 +5,6 @@ you do, please read the following guidelines.
 
 ## Submission context
 
-### Got a question or problem?
-
-For quick questions there's no need to open an issue as you can reach us on
-[gitter.im][1].
-
-  [1]: https://gitter.im/mkdocs-material/general
-
 ### Found a bug?
 
 If you found a bug in the source code, you can help us by submitting an issue
@@ -19,7 +12,7 @@ to the [issue tracker][2] in our GitHub repository. Even better, you can submit
 a Pull Request with a fix. However, before doing so, please read the
 [submission guidelines][3].
 
-  [2]: https://github.com/squidfunk/mkdocs-material/issues
+  [2]: https://github.com/docarys/docarys-material/issues
   [3]: #submission-guidelines
 
 ### Missing a feature?
@@ -62,7 +55,7 @@ Search GitHub for an open or closed PR that relates to your submission. You
 don't want to duplicate effort. If you do not find a related issue or PR,
 go ahead.
 
-1. **Development**: Fork the project, set up the [development environment][4],
+1. **Development**: Fork the project, set up the development envinroment,
   make your changes in a separate git branch and add descriptive messages to
   your commits.
 
@@ -71,11 +64,9 @@ go ahead.
   all times be installable through GitHub.
 
 3. **Pull Request**: After building the theme, commit the compiled output, push
-  your branch to GitHub and send a PR to `mkdocs-material:master`. If we
+  your branch to GitHub and send a PR to `docarys-material:master`. If we
   suggest changes, make the required updates, rebase your branch and push the
   changes to your GitHub repository, which will automatically update your PR.
 
 After your PR is merged, you can safely delete your branch and pull the changes
 from the main (upstream) repository.
-
-  [4]: http://squidfunk.github.io/mkdocs-material/customization/#theme-development
