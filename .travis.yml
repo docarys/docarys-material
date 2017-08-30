@@ -1,61 +1,24 @@
-# Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
-
-# Permission is hereby granted, free of charge, to any person obtaining a copy
-# of this software and associated documentation files (the "Software"), to
-# deal in the Software without restriction, including without limitation the
-# rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-# sell copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-
-# The above copyright notice and this permission notice shall be included in
-# all copies or substantial portions of the Software.
-
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-# FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-# FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-# IN THE SOFTWARE.
-
 language: node_js
 sudo: false
-
-# -----------------------------------------------------------------------------
-# Regular builds
-# -----------------------------------------------------------------------------
-
-# Node.js version and necessary services
 node_js: 5
 services:
-  - docker
-
-# Limit clone depth to 5, to speed up build
+- docker
 git:
   depth: 5
-
-# Cache dependencies
 cache:
   yarn: true
   directories:
-    - node_modules
-
-# Install yarn as Travis doesn't support it out of the box
+  - node_modules
 before_install:
-  - npm install -g yarn@v0.22.0
-
-# Install dependencies
+- npm install -g yarn@v0.22.0
 install:
-  - yarn install --ignore-optional
-
-# Perform build and release
+- yarn install --ignore-optional
 script:
-  - yarn run build
-
+- yarn run build
 deploy:
   on:
     tags: true
   provider: npm
   email: sesispla@outlook.com
   api_key:
-    secure: ybZN7BMC8LnAiu6pA9xPEyJekX61Km2UAikmc0+MAL4vpp3QnyUfFuh0FP0C4gBgiwIUeOkJ42X3d4d7pADoPQIZPdGZQTeoMObBhVckVd4eS+3uQzWrfi96X1Nt5wfEk3uTqo8wHYfbO4L69969+pC7RBZx0Ie7MOWjY1hSZrbJJt5a8eq2tIidtgA0ngIJ8eVfn09quS8LUsbkTN2dT9/4kA99m/vuLRSaHuNPwz9KZXDienBwV8mpgfDtpuj8MJVrHYW6dZywhBcpqE+nvdlD8xErU2HDHBrPfX3S/naDqFq4cbW8CmA0cmKKbToqGJPmmTnw5GKEqIegIF7UIxM958rY3xfKiXBFgFMo14Qq2Q/iMs3uN3egKmQeOkgWTsd/HYD3mAKEUcQl3/NaQ+G6EhZRVKg7DOMR01TX9fOWJkzLCc1kNZHaXzhEWrQXfTmBeWw0m0WvWKSOLKJ3y8gNyVYfyD92L9EBkI+d5SNYofGMM7N/VLayNDhlTCkTrhb0C0/XgJnMvbRpILeHmcuN3iKP24mtT5wdibaP2rtCkKfge27U6/6UWx+Zu83gNMGPb3KDdl/f5k7ZakS5Q3SbnycUBOQUqAbMNEEG0rsPSuzzdoXSipg1H4tEYxlPGzd1wUUBBqNLOAfeLYu6uHNJzpZ643tnhwMcTochj8Y=
+    secure: lCBcQo4x0U3WoKq4M/WIbZMiZh9b7i6w+8wY3laE9cACsDrD1HZMRRXbTuGPvVL7pcyedkT0/mGUrzFeqdfblyPoqfx60WvrN7Aq35vrgehy2uMyYw0MNsy99EYDn5bMjepL0Jbm4DxdyNn1Kbas+tNyPhIBWZ1IZDAsqJFJY2rF4E9AsB3xwU3D28KLAiwWyYNaNYRHK98DKzuoAujl4QDfbpJI599cs2w6g4Ir1DtvxE7FfI1bDwF2IIwzqXVc5HK7Fos7pKB+bTD3PC9+xVvYyTBa6NDlu06T61b56m8zO5TSBu5TD9IDm0ugwKuZx+2GGNsIvsDCCAG+VUTt4AxQXCT0J4VY1aryn/QjKNKQ3PnZc8OTVEfzrj+4K/sJEz+7OAc+SQmzVXiSKzhKyOkpNN/cbOJbP+sQ+3B/IagDuDyCgpnIYbDcjEkD7G1jfw6Kz7J/xEO/rB1M6lC4zqxgre85ooJeetdEVVL4HBobaqTgdhPA2++Al5mI+qDF/RHzaNJGb97D2+GijyaFddlGNEnFMT/fA0TU3ogVMg4RBQH2Hmxa/DGie+hPO6g5bj2a+p1C8UFKvdWFv5NXrsNC/ej/2cnXssdKuCPl52XKd8i9333w424ZgGVXEyfjEMkH1k+e/t61Okj1H90iAl0CNUtmaBA7HQiq+xPei1w=
