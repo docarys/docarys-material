@@ -18,14 +18,15 @@
 
 ### Package versions
 
-* Python: `python --version`
-* MkDocs: `mkdocs --version`
-* Material: `pip show mkdocs-material | grep -E ^Version`
+* Node: `node --version`
+* Docarys: `docarys --version`
+* Material: `npm view docarys-material version`
+* Generator: `npm view generator-docarys version`
 
 ### Project configuration
 
 ``` yaml
-The contents of your mkdocs.yml
+The contents of your docarys.yml
 ```
 
 ### System information
