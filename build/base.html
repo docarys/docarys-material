@@ -24,7 +24,7 @@
       {% else %}
         <link rel="shortcut icon" href="{{ base_url }}/assets/images/favicon.png">
       {% endif %}
-      <meta name="generator" content="docarys-{{ docarys_version }}, docarys-material-1.0.3">
+      <meta name="generator" content="docarys-{{ docarys_version }}, docarys-material-1.0.4">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta.title %}
@@ -154,7 +154,7 @@
       {% endblock %}
     </div>
     {% block scripts %}
-      <script src="{{ base_url }}/assets/javascripts/application-7ce18e8418.js"></script>
+      <script src="{{ base_url }}/assets/javascripts/application-82edcb35d5.js"></script>
       {% set languages = lang.t("search.languages").split(",") %}
       {% if languages | length and languages[0] != "" %}
         {% set path = base_url + "/assets/javascripts/lunr" %}
