@@ -7,7 +7,7 @@
   <ul class="contributors">
       {% for contributor in git.contributors %}
           <li>
-              <img src="{{ contributor.gravatar }}" text="{{ contributor.user }}" alt="{{ contributor.user }}" />
+              <img src="{{ contributor.gravatar }}" title="{{ contributor.user }}" text="{{ contributor.user }}" alt="{{ contributor.user }}" />
           </li>
       {% endfor %}
       <span> All </span>
