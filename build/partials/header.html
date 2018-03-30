@@ -19,9 +19,11 @@
           {% block site_name %}
             {% if page %}
               {% for parent in page.ancestors %}
-                <span class="md-header-nav__parent">
-                  {{ parent.title }}
-                </span>
+                {% if parent.title !== 'root' %}
+                  <span class="md-header-nav__parent">
+                    {{ parent.title }}
+                  </span>
+                {% endif %}
               {% endfor %}
             {% endif %}
             {{ page.title | default(config.site_name, true) }}
