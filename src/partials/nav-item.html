@@ -1,5 +1,5 @@
 <!--
-  Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
+  Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
   of this software and associated documentation files (the "Software"), to
@@ -71,10 +71,12 @@
         type="checkbox" id="toc" />
 
     <!-- Hack: see partials/toc.html for more information -->
-    {% if toc_ %}
+    {% if toc_ | first %}
       {% set toc_ = (toc_ | first).children %}
+    {% endif %}
 
     <!-- Render table of contents, if not empty -->
+    {% if toc_ | first %}
       <label class="md-nav__link md-nav__link--active" for="toc">
         {{ nav_item.title }}
       </label>
@@ -85,7 +87,7 @@
     </a>
 
     <!-- Show table of contents -->
-    {% if toc_ %}
+    {% if toc_ | first %}
       {% include "partials/toc.html" %}
     {% endif %}
   </li>

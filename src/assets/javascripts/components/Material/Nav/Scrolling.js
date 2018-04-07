@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2017 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2018 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -50,7 +50,8 @@ export default class Scrolling {
   setup() {
 
     /* Initially set overflow scrolling on main pane */
-    this.el_.children[1].style.webkitOverflowScrolling = "touch"
+    const main = this.el_.children[this.el_.children.length - 1]
+    main.style.webkitOverflowScrolling = "touch"
 
     /* Find all toggles and check which one is active */
     const toggles = this.el_.querySelectorAll("[data-md-toggle]")
