@@ -58,7 +58,7 @@ watch-webpack: node_modules clean
 
 # Serve documentation with MkDocs
 watch-mkdocs: clean
-	while [ ! -d "./material" ]; do sleep 1; done
+	while [ ! -d "./build" ]; do sleep 1; done
 	mkdocs serve
 
 # Run Webpack and MkDocs in watch mode

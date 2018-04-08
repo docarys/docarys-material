@@ -86,7 +86,7 @@ module.exports = env => {
 
     /* Output */
     output: {
-      path: path.resolve(__dirname, "material"),
+      path: path.resolve(__dirname, "build"),
       filename: `[name]${env && env.prod ? ".[chunkhash]" : ""}.js`,
       hashDigestLength: 8,
       libraryTarget: "window"
@@ -314,7 +314,7 @@ module.exports = env => {
       /* Apply manifest */
       new EventHooksPlugin({
         "after-emit": (compilation, cb) => {
-          const manifest = require(path.resolve("material/manifest.json"))
+          const manifest = require(path.resolve("build/manifest.json"))
           Object.keys(compilation.assets).forEach(name => {
             if (name.match(/\.html/)) {
               const asset = compilation.assets[name]
