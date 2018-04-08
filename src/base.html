@@ -78,7 +78,7 @@
 
       <!-- Generator banner -->
       <meta name="generator"
-          content="mkdocs-{{ mkdocs_version }}, $md-name$-$md-version$" />
+          content="docarys-{{ docarys_version }}, $md-name$-$md-version$" />
     {% endblock %}
 
     <!-- Site title -->
@@ -168,12 +168,14 @@
           hosting platforms (GitHub, GitLab or Bitbucket) to show icon.
         -->
         {% set platform = config.extra.repo_icon or config.repo_url %}
-        {% if "github" in platform %}
-          {% include "assets/images/icons/github.svg" %}
-        {% elif "gitlab" in platform %}
-          {% include "assets/images/icons/gitlab.svg" %}
-        {% elif "bitbucket" in platform %}
-          {% include "assets/images/icons/bitbucket.svg" %}
+        {% if platform %}
+          {% if "github" in platform %}
+            {% include "assets/images/icons/github.svg" %}
+          {% elif "gitlab" in platform %}
+            {% include "assets/images/icons/gitlab.svg" %}
+          {% elif "bitbucket" in platform %}
+            {% include "assets/images/icons/bitbucket.svg" %}
+          {% endif %}
         {% endif %}
       </defs>
     </svg>
@@ -341,7 +343,7 @@
       <!-- Initialize application -->
       <script>
         app.initialize({
-          version: "{{ mkdocs_version }}",
+          version: "{{ docarys_version }}",
           url: {
             base: "{{ base_url }}"
           }

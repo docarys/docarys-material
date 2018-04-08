@@ -35,7 +35,7 @@
         <meta name="lang:{{ key }}" content="{{ language[key] }}">
       {% endfor %}
       <link rel="shortcut icon" href="{{ base_url }}/{{ config.theme.favicon }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, docarys-material-2.0.0">
+      <meta name="generator" content="docarys-{{ docarys_version }}, docarys-material-2.0.1">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -81,12 +81,14 @@
     <svg class="md-svg">
       <defs>
         {% set platform = config.extra.repo_icon or config.repo_url %}
-        {% if "github" in platform %}
-          {% include "assets/images/icons/github.a4034fb1.svg" %}
-        {% elif "gitlab" in platform %}
-          {% include "assets/images/icons/gitlab.348cdb3a.svg" %}
-        {% elif "bitbucket" in platform %}
-          {% include "assets/images/icons/bitbucket.4ebea66e.svg" %}
+        {% if platform %}
+          {% if "github" in platform %}
+            {% include "assets/images/icons/github.a4034fb1.svg" %}
+          {% elif "gitlab" in platform %}
+            {% include "assets/images/icons/gitlab.348cdb3a.svg" %}
+          {% elif "bitbucket" in platform %}
+            {% include "assets/images/icons/bitbucket.4ebea66e.svg" %}
+          {% endif %}
         {% endif %}
       </defs>
     </svg>
@@ -191,7 +193,7 @@
           {% endif %}
         {% endif %}
       {% endif %}
-      <script>app.initialize({version:"{{ mkdocs_version }}",url:{base:"{{ base_url }}"}})</script>
+      <script>app.initialize({version:"{{ docarys_version }}",url:{base:"{{ base_url }}"}})</script>
       {% for path in extra_javascript %}
         <script src="{{ path }}"></script>
       {% endfor %}
