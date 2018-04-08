@@ -1,5 +1,5 @@
 .github/*
-material/*
+build/*
 .editorconfig
 .gitignore
 CHANGELOG
